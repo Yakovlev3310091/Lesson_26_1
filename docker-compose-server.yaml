@@ -2,6 +2,6 @@ version: "3.9"
 
 services:
   app:
-    image: alexpetrovi4/flask-app:version-1
+    image: alexpetrovi4/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID
     ports:
       - 80:80
