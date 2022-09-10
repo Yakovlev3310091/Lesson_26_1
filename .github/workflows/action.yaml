@@ -18,19 +18,15 @@ jobs:
     steps:
       - name: clone code
         uses: actions/checkout@v2
-      - name: render configs
-        run: |
-          mkdir deploy
-          cat docker-compose-server.yaml | envsubst > deploy/docker-compose.yaml
       - name: copy file to server
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          sourse: "deploy/docker-compose.yaml"
+          sourse: "docker-compose.yaml"
           target: "flask_app_server"
-          strip_components: 1
+
 
 
           
