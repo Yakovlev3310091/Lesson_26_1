@@ -7,5 +7,5 @@ jobs:
       - name: clone code
         uses: actions/checkout@v2
       - name: docker build
-        run: docker build alexpetrovi4/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
+        run: docker build -t alexpetrovi4/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
 
