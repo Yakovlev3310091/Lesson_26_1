@@ -24,7 +24,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          sourse: "docker-compose.yaml"
+          source: "docker-compose.yaml"
           target: "flask_app_server"
 
 
